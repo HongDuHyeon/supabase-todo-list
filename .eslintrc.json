@@ -1,3 +1,24 @@
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": ["next/core-web-vitals", "next/typescript"],
+  "env": {
+    "node": true
+  },
+  "parserOptions": {
+    "sourceType": "script"
+  },
+  "rules" : {
+    "prettier/prettier": [
+      "error",
+      {
+        "singleQuote": true, // 작은 따옴표 사용
+        "trailingComma": "all", // 여러 줄을 사용할 때 후행 콤마 사용 방식
+        "semi": true, // 세미콜론 사용
+        "printWidth": 120, // 개행이 일어나는 한 행의 최대 너비
+        "arrowParens": "always", // 화살표 함수 괄호 사용
+      }
+    ],
+    // react-hooks
+    "react-hooks/exhaustive-deps": "error",
+
+  }
 }
